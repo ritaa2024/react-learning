@@ -1,12 +1,12 @@
 import React from "react";
 import User from "./User";
-function Users({ users,ageIncrese }) {
+function Users({ users,ageIncrese,deleteUser }) {
   console.log("user-----------", users);
   return (
     <div>
       {users.map((user) => (
       
-        <User {...user} key={user.id} ageIncrese={ageIncrese}></User>
+        <User {...user} key={user.id} ageIncrese={ageIncrese} deleteUser={deleteUser}></User>
 
       ))}
     </div>

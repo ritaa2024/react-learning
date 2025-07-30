@@ -6,6 +6,7 @@ import Test from "./Test";
 // import StateWithArray from "./StateWithArray";
 import StateWithObject from './StateWithObject';
 import StateWithArrOfObj from "./StateWithArrOfObj";
+import Form from "./Form";
 function App() {
   const [username, Setusername] = useState("");
   const [password, Setpassword] = useState("");
@@ -18,7 +19,9 @@ function App() {
    
     {/* <StateWithArray></StateWithArray> */}
     {/* <StateWithObject></StateWithObject> */}
-    <StateWithArrOfObj></StateWithArrOfObj>
+    {/* <StateWithArrOfObj></StateWithArrOfObj> */}
+
+    <Form></Form>
     </>
   );
 }
