@@ -1,16 +1,26 @@
-import React, { useState } from 'react'
-
-function Todo({id,title,completed,changeToggle}) {
-
+import React, { useState } from "react";
+import { ImCross } from "react-icons/im";
+function Todo({ id, title, completed, changeToggle, removeTodo }) {
   return (
-    <div style={{border:"2px solid black",padding:"1rem",margin:"1rem"}}>
-        <p>id : {id}</p>
-        <p>title : {title}</p>
-        {/* <p>completed : {completed ? "true" : "false"}</p> */}
-      <input type="checkbox" checked={completed} onChange={()=>{changeToggle(id)}}/>
+    <div className="todo">
+      <div className="todo-title">
+        <input
+          type="checkbox"
+          checked={completed}
+          onChange={() => {
+            changeToggle(id);
+          }}
+        />
+        <p className={`${completed}?"completed":""`}>{title}</p>
+      </div>
+     
+      {/* <p>id : {id}</p> */}
+<div className="cross-btn" onClick={() => removeTodo(id)}>
+<ImCross></ImCross>
+</div>
 
     </div>
-  )
+  );
 }
 
-export default Todo
+export default Todo;
